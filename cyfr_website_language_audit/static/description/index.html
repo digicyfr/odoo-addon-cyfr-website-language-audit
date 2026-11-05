@@ -1,18 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Website Language Audit</title>
+  <title>Website Language Audit for Odoo 19</title>
 </head>
 <body>
-  <h1>Website Language Audit</h1>
-  <p>Review static text, localized SEO fields and image descriptions on published Odoo 19 website pages.</p>
-  <ul>
-    <li>Choose one website and one enabled non-default language.</li>
-    <li>Open advisory findings in Odoo's native page editor.</li>
-    <li>Keep page bodies and translations in Odoo; the audit stores metadata and hashes only.</li>
-  </ul>
-  <p>Identical copy can be intentional. Dynamic QWeb content and rendered JavaScript are outside this audit.</p>
+  <section class="container">
+    <h1>Website Language Audit</h1>
+    <p class="lead">Review published pages for missing localized SEO fields, images without alt text, and static copy that matches the source language.</p>
+    <p>Free, open-source Odoo 19 addon (LGPL-3). Requires the standard <code>website</code> module.</p>
+    <h2>What it does</h2>
+    <ul>
+      <li>Scan one website and one enabled non-default language in a bounded scan.</li>
+      <li>Review advisory findings for localized SEO fields, literal image alt text, and identical static text.</li>
+      <li>Open the affected page in Odoo’s native editor, select the target language, then rerun the scan.</li>
+      <li>Use English and Polish screens, guides, tests and demo data; scans do not change pages or translations.</li>
+    </ul>
+    <h2>See it in Odoo</h2>
+    <p>Open Website → Reporting → Language Audits and scan published pages for a target language.</p>
+    <img class="img-fluid" src="main_screenshot.png" width="1440" height="900" alt="Website Language Audit issue list in Odoo 19 showing published page URLs and advisory SEO and static copy findings">
+    <h2>Compatibility and scope</h2>
+    <p>Tested on Odoo 19 Community. Findings are advisory: identical copy may be intentional, and an empty SEO title may use Odoo’s default. The scan checks stored static page content, not rendered JavaScript. Enterprise compatibility and large-site performance remain unverified.</p>
+  </section>
 </body>
 </html>
